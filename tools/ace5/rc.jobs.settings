@@ -1,0 +1,4 @@
+# For the stock 375 x 812 point layout. Unlock, Settings, Wi-Fi, back, scroll twice.
+# Use --thread-trace Preferences to retain the blocking stack if navigation stalls.
+/redwood/bin/rwtouch wait 45 notify com.redwood.unlock wait 15 swipe 0.5 0.985 0.5 0.3 300 wait 20 tap 0.615 0.71 wait 20 tap 0.5 0.385 wait 30 tap 0.08 0.07 wait 10 swipe 0.5 0.8 0.5 0.4 600 wait 10 swipe 0.5 0.4 0.5 0.8 600
+/redwood/bin/hello_dyn A750 SETTINGS SCENARIO COMPLETE

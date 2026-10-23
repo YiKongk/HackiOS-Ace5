@@ -1,0 +1,10 @@
+# Local UIKit application test. Requires Triangle in system.apfs and
+# prepare-gpu-root.py --metal --app for the launch helper.
+/redwood/bin/rwtouch wait 60
+/redwood/bin/metal_props on
+/redwood/bin/metal_caps
+/redwood/bin/triangle_app --layer
+/redwood/bin/rwtouch wait 15 notify com.redwood.unlock wait 5
+/redwood/bin/battery_test open redwoodtriangle://
+/redwood/bin/rwtouch wait 120
+/redwood/bin/hello_dyn A750 METAL APPLICATION WINDOW COMPLETE

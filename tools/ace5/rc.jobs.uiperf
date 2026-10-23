@@ -1,0 +1,31 @@
+# Matched desktop and Settings workload, with stock wallpaper and resolution.
+# Keep every command below init's 63-argument limit.
+# prepare-gpu-root.py --metal --wallpaper --app --display-test
+# phone.py --render-trace; these markers bracket renderer measurements, not panel FPS.
+/redwood/bin/rwtouch wait 45 notify com.redwood.unlock wait 15 swipe 0.5 0.985 0.5 0.3 300 wait 15
+/redwood/bin/metal_props on
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 2 swipe 0.2 0.5 0.8 0.5 600 wait 5
+/redwood/bin/hello_dyn DESKTOP_BEGIN
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/rwtouch swipe 0.8 0.5 0.2 0.5 600 wait 0.25 swipe 0.2 0.5 0.8 0.5 600 wait 0.25
+/redwood/bin/hello_dyn DESKTOP_END
+/redwood/bin/battery_test open prefs:
+/redwood/bin/rwtouch wait 20 swipe 0.5 0.8 0.5 0.4 600 wait 5
+/redwood/bin/hello_dyn SETTINGS_BEGIN
+/redwood/bin/rwtouch zigzag 0.5 0.8 0.35 1000 12 16
+/redwood/bin/hello_dyn SETTINGS_END
+/redwood/bin/rwtouch wait 3 swipe 0.5 0.985 0.5 0.3 300 wait 10
+/redwood/bin/display_test
+/redwood/bin/metal_drv_test --draw-all 0 271 /redwood/share/metal/AppleMetalGLRenderer.metallib
+/redwood/bin/triangle_app --layer
+/redwood/bin/hello_dyn UI_BENCH_COMPLETE

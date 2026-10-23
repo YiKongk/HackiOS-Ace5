@@ -1,0 +1,11 @@
+{
+  "name": "HackiOS-Ace5",
+  "edition": "pre-wifi-source",
+  "date": "2026-10-24",
+  "kernel_source": "86e5296f2e94f0ee6ec2ef00d0950572a49b7095",
+  "userland_source": "b10b761ba73bea408841de3ae4d2550d97a0f1e3",
+  "mu_source": "42fe563791e51bf5500c2e470ed294ca0c94b97c",
+  "device": "OnePlus Ace 5 PKG110 / giulia",
+  "wifi_supported": false,
+  "publication": "Source snapshot; no private development history, firmware or prebuilt binaries"
+}

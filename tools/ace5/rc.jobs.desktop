@@ -1,0 +1,6 @@
+# Interactive desktop. Requires prepare-gpu-root.py --metal and phone.py --metal.
+# Let the window server establish its validated OpenGL ES path before making
+# the experimental Metal device available to subsequently launched apps.
+/redwood/bin/rwtouch wait 60
+/redwood/bin/metal_props on
+/redwood/bin/hello_dyn A750 INTERACTIVE DESKTOP METAL ENABLED

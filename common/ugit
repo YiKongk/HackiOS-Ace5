@@ -1,0 +1,5 @@
+#!/bin/bash
+# Compatibility alias: this public snapshot has one Git repository.
+set -e
+ROOT=$(cd "$(dirname "$0")/.." && pwd)
+exec git -C "$ROOT" "$@"

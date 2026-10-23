@@ -1,0 +1,4 @@
+/redwood/bin/rwtouch wait 60
+/redwood/bin/metal_props on
+/redwood/bin/display_test
+/redwood/bin/hello_dyn ACE5_DAILY_DISPLAY_CHECK_COMPLETE

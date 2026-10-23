@@ -1,0 +1,17 @@
+# Ten-minute RAM run with phone.py --gpu-display --fb-filter bilinear.
+# Requires prepare-gpu-root.py --metal --app --display-test and Triangle in system.apfs.
+# Pixel readback, 271 fragment shaders, 600 UIKit Metal frames, then Settings scrolling.
+/redwood/bin/rwtouch wait 60
+/redwood/bin/metal_props on
+/redwood/bin/metal_caps
+/redwood/bin/display_test
+/redwood/bin/metal_drv_test --draw-all 0 271 /redwood/share/metal/AppleMetalGLRenderer.metallib
+/redwood/bin/triangle_app --layer
+/redwood/bin/rwtouch wait 15 notify com.redwood.unlock wait 5
+/redwood/bin/battery_test open prefs:
+/redwood/bin/rwtouch wait 20 swipe 0.5 0.8 0.5 0.4 600 wait 5 swipe 0.5 0.4 0.5 0.8 600 wait 5
+/redwood/bin/battery_test open redwoodtriangle://
+/redwood/bin/rwtouch wait 330
+/redwood/bin/battery_test open prefs:
+/redwood/bin/rwtouch wait 20 swipe 0.5 0.8 0.5 0.4 600 wait 5 swipe 0.5 0.4 0.5 0.8 600
+/redwood/bin/hello_dyn A750 GPU DISPLAY STRESS COMPLETE

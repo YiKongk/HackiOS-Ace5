@@ -1,0 +1,17 @@
+# Ten-minute RAM run. Requires a normal Triangle bundle in system.apfs,
+# prepare-gpu-root.py --metal --app, and phone.py --seconds 600.
+# 271 fragment shaders, full-resolution bare drawable, then 600 UIKit frames
+# at the test application's deliberate 2 Hz cadence. This is not an FPS test.
+/redwood/bin/rwtouch wait 60
+/redwood/bin/metal_props on
+/redwood/bin/metal_caps
+/redwood/bin/metal_drv_test --draw-all 0 271 /redwood/share/metal/AppleMetalGLRenderer.metallib
+/redwood/bin/triangle_app --layer
+/redwood/bin/rwtouch wait 15 notify com.redwood.unlock wait 5
+/redwood/bin/battery_test open prefs:root=WIFI
+/redwood/bin/rwtouch wait 20 tap 0.08 0.07 wait 5
+/redwood/bin/battery_test open redwoodtriangle://
+/redwood/bin/rwtouch wait 330
+/redwood/bin/battery_test open prefs:root=WIFI
+/redwood/bin/rwtouch wait 30 tap 0.08 0.07 wait 10 swipe 0.5 0.8 0.5 0.4 600 wait 10 swipe 0.5 0.4 0.5 0.8 600
+/redwood/bin/hello_dyn A750 METAL STRESS AND SETTINGS COMPLETE
